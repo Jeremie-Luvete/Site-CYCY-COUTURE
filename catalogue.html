@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Boutique | CyCy Couture</title>
+  <meta name="description" content="Découvrez toute la collection CyCy Couture : robes, costumes, ensembles et accessoires de luxe.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="topbar">Livraison offerte dès 150 $ · Paiement par Mobile Money et carte bancaire</div>
+
+  <!-- ===== EN-TÊTE ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <div class="header__left">
+        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="nav">
+          <a href="catalogue.html?cat=femme">Femme</a>
+          <a href="catalogue.html?cat=homme">Homme</a>
+          <a href="catalogue.html?cat=accessoires">Accessoires</a>
+          <a href="index.html#atelier">Sur-mesure</a>
+          <a href="index.html#atelier" class="nav__mobile-only">Prendre rendez-vous</a>
+        </nav>
+      </div>
+
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="CyCy Couture">
+      </a>
+
+      <div class="header__actions">
+        <a href="index.html#atelier" class="link-rdv">Prendre rendez-vous</a>
+        <a href="catalogue.html" class="icon-btn" aria-label="Rechercher">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        </a>
+        <a href="#" class="icon-btn" aria-label="Mon compte">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </a>
+        <a href="panier.html" class="icon-btn" aria-label="Panier">
+          <svg viewBox="0 0 24 24"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== BANDEAU ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Accueil</a> / Boutique</p>
+        <h1>La <em>Boutique</em></h1>
+        <p>Chaque pièce est pensée pour durer : des coupes précises, des tissus choisis avec exigence.</p>
+      </div>
+    </section>
+
+    <!-- ===== BARRE DE FILTRES ===== -->
+    <div class="catalog-bar">
+      <div class="container catalog-bar__inner">
+        <div class="cat-tabs" role="tablist">
+          <button class="cat-tab" data-cat="tout">Tout</button>
+          <button class="cat-tab" data-cat="femme">Femme</button>
+          <button class="cat-tab" data-cat="homme">Homme</button>
+          <button class="cat-tab" data-cat="accessoires">Accessoires</button>
+        </div>
+
+        <div class="catalog-tools">
+          <label class="search-field">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+            <input type="search" id="searchInput" placeholder="Rechercher une pièce" aria-label="Rechercher une pièce">
+          </label>
+          <select class="select" id="typeFilter" aria-label="Type d'article"></select>
+          <select class="select" id="sortSelect" aria-label="Trier">
+            <option value="nouveautes">Nouveautés</option>
+            <option value="prix-asc">Prix croissant</option>
+            <option value="prix-desc">Prix décroissant</option>
+            <option value="nom">Nom (A-Z)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PRODUITS ===== -->
+    <section class="catalog">
+      <div class="container">
+        <div class="catalog__meta">
+          <h2 id="catalogTitle">Toute la collection</h2>
+          <span class="result-count" id="resultCount"></span>
+        </div>
+
+        <div class="products" id="catalogGrid"></div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <h3>Aucune pièce ne correspond</h3>
+          <p>Essayez une autre recherche ou réinitialisez les filtres.</p>
+          <button class="btn btn--navy" id="resetFilters">Réinitialiser les filtres</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIED DE PAGE ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">CyCy Couture</p>
+          <p class="footer__tagline">L'excellence dans la simplicité</p>
+          <p>Maison de couture dédiée à l'élégance intemporelle, du prêt-à-porter au sur-mesure.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="TikTok">TK</a>
+            <a href="#" aria-label="WhatsApp">WA</a>
+          </div>
+        </div>
+        <div>
+          <h5>Boutique</h5>
+          <ul>
+            <li><a href="catalogue.html?cat=femme">Femme</a></li>
+            <li><a href="catalogue.html?cat=homme">Homme</a></li>
+            <li><a href="catalogue.html?cat=accessoires">Accessoires</a></li>
+            <li><a href="index.html#atelier">Sur-mesure</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Service client</h5>
+          <ul>
+            <li><a href="#">Suivre ma commande</a></li>
+            <li><a href="#">Livraison et retours</a></li>
+            <li><a href="#">Guide des tailles</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="index.html#atelier">Prendre rendez-vous</a></li>
+            <li><a href="mailto:contact@cycycouture.com">contact@cycycouture.com</a></li>
+            <li><a href="#">+243 000 000 000</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> CyCy Couture. Tous droits réservés.</p>
+        <p><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/catalogue.js"></script>
+</body>
+</html>
